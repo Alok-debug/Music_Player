@@ -1,0 +1,31 @@
+body{
+    background-color: aquamarine;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: black; 
+    height: 5rem;
+}
+
+nav ul{
+    display: flex;
+    color: white;
+    list-style-type: none;
+    margin: 20px;
+
+}
+
+.brand img{
+    width: 60px;
+    border-radius: 50%;
+    radius
+    height: 60px;
+    margin: 10px;
+
+}
