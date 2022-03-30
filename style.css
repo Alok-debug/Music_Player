@@ -17,15 +17,24 @@ nav ul{
     display: flex;
     color: white;
     list-style-type: none;
-    margin: 20px;
-
-}
+    }
 
 .brand img{
     width: 60px;
     border-radius: 50%;
-    radius
     height: 60px;
     margin: 10px;
+}
 
+.bottomNav{
+    height: 20rem;
+    display: flex;
+    margin-top: 50rem;
+}
+.bottomBrand img{
+    width: 70px;
+    border-radius: 42%;
+    height: 70px;
+    margin-left: 100px;
+    margin-top: 20px;
 }
