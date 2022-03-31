@@ -60,7 +60,7 @@ nav ul li{
     background-color: white;
     color: maroon;
     border-radius: 25px;
-    width: 40vw;
+    width: 35vw;
     height: 2rem;
     margin: 12px 0;
     display:flex;
@@ -73,8 +73,16 @@ nav ul li{
     margin: 0 23px;
 }
 .timeStamp{
-    margin: 0 23px;
+    display: flex;
+    padding: 20px;
+    
 }
+.timeStamp i{
+    margin-left: 40px;
+}
+
+
+ 
 
 
 .bottom{
