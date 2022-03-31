@@ -43,7 +43,7 @@ nav ul li{
     padding-right: 3rem;
 }
 .container{
-    min-height: 75vh;
+    min-height: 60vh;
     background-color: black;
     color: white;
     font-family: 'Varela Round', sans-serif;
@@ -55,6 +55,28 @@ nav ul li{
     background-image: url('background.jpg');
 
 }
+
+.songItem{
+    background-color: white;
+    color: maroon;
+    border-radius: 25px;
+    width: 40vw;
+    height: 2rem;
+    margin: 12px 0;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+}
+.timeStamp{
+    margin: 0 23px;
+}
+
+
 .bottom{
     position: sticky;
     height: 130px;
@@ -87,7 +109,7 @@ nav ul li{
 .bottomNav{
     height: 20rem;
     display: flex;
-    margin-top: 50rem;
+
     font-family: 'Varela Round', sans-serif;
 }
 .bottomBrand img{
