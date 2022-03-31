@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu&family=Varela+Round&display=swap');
 body{
     background-color: aquamarine;
 }
@@ -10,26 +12,83 @@ body{
 
 nav{
     background-color: black; 
-    height: 5rem;
+    height: 4rem;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 nav ul{
     display: flex;
+    align-items: center;
     color: white;
     list-style-type: none;
     }
 
+nav ul li{
+    padding: 0 12px;
+}    
+
 .brand img{
-    width: 60px;
+    width: 50px;
     border-radius: 50%;
-    height: 60px;
-    margin: 10px;
+    height: 50px;
+    margin: 7px;
+
 }
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    padding-right: 3rem;
+}
+.container{
+    min-height: 75vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    margin: 10px auto;
+    width: 75%;
+    border-radius: 15px;
+    padding: 35px;
+    background-image: url('background.jpg');
+
+}
+.bottom{
+    position: sticky;
+    height: 130px;
+    background-color:#142d4c;
+    color: white;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+.icons{
+    margin: 14px;
+}
+.icons i{
+    cursor: pointer;
+}
+#myProgressBar{
+    width: 80vw;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
 
 .bottomNav{
     height: 20rem;
     display: flex;
     margin-top: 50rem;
+    font-family: 'Varela Round', sans-serif;
 }
 .bottomBrand img{
     width: 70px;
