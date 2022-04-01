@@ -4,6 +4,7 @@ let masterPlay= document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gif= document.getElementById('gif');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
+let masterSongName = document.getElementById('masterSongName');
 
 let songs= [
     {songName: " Tum Hi Ho - Arijit Singh",          filePath: "1.mp3 ", coverPath:" "},
@@ -49,6 +50,60 @@ songItems.forEach((element,i ) => {
     element.getElementsByClassName('songName')[0].innerText= songs[i].songName;
     
 });
+
+const makeAllPlays = ()=> {
+    Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>{
+        element.classList.remove('fa-circle-pause');
+        element.classList.add('fa-circle-play');
+
+    })
+}
+
+Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
+    element.addEventListener('click', (e)=>{
+        makeAllPlays();
+        songIndex= parseInt(e.target.id);
+        e.target.classList.remove('fa-circle-play');
+        e.target.classList.add('fa-circle-pause');
+        audioElement.src = '${songIndex}.mp3';
+        masterSongName.innerText = songs[songIndex].songName;
+        audioElement.currentTime =0;
+        audioElement.play();
+        masterPlay.classList.add('fa-circle-pause');
+        masterPlay.classList.remove('fa-circle-play');
+       
+
+    })
+})
+
+document.getElementById('next').addEventListener('click', ()=>{
+    if(songIndex>=9){
+        songIndex=0;
+    }
+    else{
+        songIndex +=1;
+    }
+    audioElement.src = '${songIndex}.mp3';
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime =0;
+    audioElement.play();
+    masterPlay.classList.add('fa-circle-pause');
+    masterPlay.classList.remove('fa-circle-play');
+})
+document.getElementById('previous').addEventListener('click', ()=>{
+    if(songIndex<=0){
+        songIndex=0;
+    }
+    else{
+        songIndex -=1;
+    }
+    audioElement.src = '${songIndex}.mp3';
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime =0;
+    audioElement.play();
+    masterPlay.classList.add('fa-circle-pause');
+    masterPlay.classList.remove('fa-circle-play');
+})
 
 
 //audioElement.play();
