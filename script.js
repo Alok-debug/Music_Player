@@ -19,6 +19,11 @@ let songs= [
     {songName: " Judaa - Arijit Singh",              filePath: "10.mp3 ", coverPath:" "}
 ]
 
+songItems.forEach((element,i ) => {
+    element.getElementsByClassName('songName')[0].innerText= songs[i].songName;
+    
+});
+
 
 masterPlay.addEventListener('click', ()=>{
     if(audioElement.paused || audioElement.currentTime<=0){
@@ -46,10 +51,7 @@ myProgressBar.addEventListener('change', ()=>{
     audioElement.currentTime = (myProgressBar.value *audioElement.duration)/100;
 })
 
-songItems.forEach((element,i ) => {
-    element.getElementsByClassName('songName')[0].innerText= songs[i].songName;
-    
-});
+
 
 const makeAllPlays = ()=> {
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>{
@@ -65,7 +67,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         songIndex= parseInt(e.target.id);
         e.target.classList.remove('fa-circle-play');
         e.target.classList.add('fa-circle-pause');
-        audioElement.src = '${songIndex}.mp3';
+        audioElement.src = `${songIndex+1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime =0;
         audioElement.play();
@@ -83,7 +85,7 @@ document.getElementById('next').addEventListener('click', ()=>{
     else{
         songIndex +=1;
     }
-    audioElement.src = '${songIndex}.mp3';
+    audioElement.src =`${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime =0;
     audioElement.play();
@@ -97,7 +99,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
     else{
         songIndex -=1;
     }
-    audioElement.src = '${songIndex}.mp3';
+    audioElement.src =`${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime =0;
     audioElement.play();
