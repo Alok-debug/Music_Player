@@ -43,12 +43,14 @@ masterPlay.addEventListener('click', ()=>{
 })
 
 audioElement.addEventListener('timeupdate',()=>{
-    
     progress= parseInt((audioElement.currentTime/audioElement.duration)*100);
     myProgressBar.value= progress;
-    //Array.from(document.getElementsByClassName('timeStamp'))[songIndex].innerText= ((audioElement.duration-audioElement.currentTime)/60).toFixed(2);
+    // Array.from(document.getElementsByClassName('timeStamp'))[songIndex].innerText= ((audioElement.duration-audioElement.currentTime)/60).toFixed(2);
     
 })
+
+
+
 
 myProgressBar.addEventListener('change', ()=>{
     audioElement.currentTime = (myProgressBar.value *audioElement.duration)/100;
@@ -77,6 +79,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         masterPlay.classList.add('fa-circle-pause');
         masterPlay.classList.remove('fa-circle-play');
         gif.style.opacity=1;
+        
     })
 })
 
