@@ -7,20 +7,21 @@ let songItems = Array.from(document.getElementsByClassName('songItem'));
 let masterSongName = document.getElementById('masterSongName');
 
 let songs= [
-    {songName: " Tum Hi Ho - Arijit Singh",          filePath: "1.mp3 ", coverPath:" "},
-    {songName: " Ae Dil Hai Mushkil - Arijit Singh", filePath: "2.mp3 ", coverPath:" "},
-    {songName: " Bas Ek Baar - Arijit Singh",        filePath: "3.mp3 ", coverPath:" "},
-    {songName: " Muskurane - Arijit Singh",          filePath: "4.mp3 ", coverPath:" "},
-    {songName: " Gerua - Arijit Singh",              filePath: "5.mp3 ", coverPath:" "},
-    {songName: " Teri Mere Kahaani - Arijit Singh",  filePath: "6.mp3 ", coverPath:" "},
-    {songName: " Hamari Adhuri Kahani -A Singh",     filePath: "7.mp3 ", coverPath:" "},
-    {songName: " Aaj Dil Shayarana - Arijit Singh",  filePath: "8.mp3 ", coverPath:" "},
-    {songName: " Aaj Phir - Arijit Singh",           filePath: "9.mp3 ", coverPath:" "},
-    {songName: " Judaa - Arijit Singh",              filePath: "10.mp3 ", coverPath:" "}
+    {songName: " Tum Hi Ho - Arijit Singh",          filePath: "1.mp3 ", coverPath:"cover.jpg "},
+    {songName: " Ae Dil Hai Mushkil - Arijit Singh", filePath: "2.mp3 ", coverPath:" cover.jpg "},
+    {songName: " Bas Ek Baar - Arijit Singh",        filePath: "3.mp3 ", coverPath:"cover.jpg  "},
+    {songName: " Muskurane - Arijit Singh",          filePath: "4.mp3 ", coverPath:"cover.jpg  "},
+    {songName: " Gerua - Arijit Singh",              filePath: "5.mp3 ", coverPath:" cover.jpg "},
+    {songName: " Teri Mere Kahaani - Arijit Singh",  filePath: "6.mp3 ", coverPath:"cover.jpg  "},
+    {songName: " Hamari Adhuri Kahani -A Singh",     filePath: "7.mp3 ", coverPath:" cover.jpg "},
+    {songName: " Aaj Dil Shayarana - Arijit Singh",  filePath: "8.mp3 ", coverPath:" cover.jpg "},
+    {songName: " Aaj Phir - Arijit Singh",           filePath: "9.mp3 ", coverPath:"cover.jpg  "},
+    {songName: " Judaa - Arijit Singh",              filePath: "10.mp3 ", coverPath:"cover.jpg "}
 ]
 
 songItems.forEach((element,i ) => {
     element.getElementsByClassName('songName')[0].innerText= songs[i].songName;
+    element.getElementsByClassName('coverImg')[0].src= songs[i].coverPath;
     
 });
 
@@ -45,6 +46,8 @@ audioElement.addEventListener('timeupdate',()=>{
     
     progress= parseInt((audioElement.currentTime/audioElement.duration)*100);
     myProgressBar.value= progress;
+    Array.from(document.getElementsByClassName('timeStamp'))[songIndex].innerText= ((audioElement.duration-audioElement.currentTime)/60);
+    console.log((audioElement.duration-audioElement.currentTime)/60);
 })
 
 myProgressBar.addEventListener('change', ()=>{

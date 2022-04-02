@@ -70,9 +70,10 @@ nav ul li{
     align-items: center;
 }
 
-.songItem img{
-    width: 43px;
+.coverImg{
+    width: 30px;
     margin: 0 23px;
+    border-radius: 50%;
 }
 .timeStamp{
     display: flex;
@@ -97,7 +98,8 @@ nav ul li{
     flex-direction:column;
     justify-content:center;
     align-items: center;
-    margin: 10px auto;
+    margin: 10px 20px;
+    border-radius: 30px;
 }
 .icons{
     margin: 14px;
