@@ -43,7 +43,7 @@ nav ul li{
     padding-right: 3rem;
 }
 .container{
-    min-height: 10vh;
+    height: 80vh;
     background-color: black;
     color: white;
     font-family: 'Varela Round', sans-serif;
