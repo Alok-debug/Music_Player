@@ -46,7 +46,7 @@ audioElement.addEventListener('timeupdate',()=>{
     
     progress= parseInt((audioElement.currentTime/audioElement.duration)*100);
     myProgressBar.value= progress;
-    Array.from(document.getElementsByClassName('timeStamp'))[songIndex].innerText= ((audioElement.duration-audioElement.currentTime)/60).toFixed(2);
+    //Array.from(document.getElementsByClassName('timeStamp'))[songIndex].innerText= ((audioElement.duration-audioElement.currentTime)/60).toFixed(2);
     
 })
 
@@ -58,8 +58,8 @@ myProgressBar.addEventListener('change', ()=>{
 
 const makeAllPlays = ()=> {
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>{
-        element.classList.remove('fa-circle-pause');
         element.classList.add('fa-circle-play');
+        element.classList.remove('fa-circle-pause');
 
     })
 }
